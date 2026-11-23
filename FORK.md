@@ -17,8 +17,11 @@ Remotes : `origin` = `yjean/slk` (mon fork), `upstream` = `gammons/slk`.
 | PR | Branche | État (au 22/11/2026) | Dans `local` |
 |---|---|---|---|
 | [#476](https://github.com/gammons/slk/pull/476) fix(ui): attach a pasted file path the terminal quoted or escaped | `fix/paste-quoted-file-paths` | Review de gammons le 16/11 : 2 bugs à corriger + conventions de test. Corrigé le 22/11 (`cf0a6b27`), en attente d'une nouvelle review. | oui |
+| [#507](https://github.com/gammons/slk/pull/507) feat(config): per-workspace default_channel (proposal) | `feat/workspace-default-channel` | Ouverte le 23/11 comme proposition : nouvelle clé de config, c'est à Grant de décider s'il la veut. | oui |
 
 #476 fait qu'un fichier collé ou glissé dans le composer est joint même quand le terminal a « protégé » son chemin : `\ ` (Ghostty, iTerm2), `'…'`, `"…"` ou `file://`. Le chemin tel quel est toujours essayé en premier.
+
+#507 ajoute `default_channel` dans `[workspaces.<slug>]` : la channel ouverte la première fois qu'un workspace s'affiche dans la session (au lancement, ou au premier passage dessus), à la place de la dernière visitée. Née du #general d'ISPD, renommé `#rocketeers` : impossible à quitter et premier de la liste, il se rouvrait à chaque lancement.
 
 ## Installation locale
 
